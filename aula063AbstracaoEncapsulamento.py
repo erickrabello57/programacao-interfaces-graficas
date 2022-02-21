@@ -25,11 +25,14 @@ class Conta(object):
     def __init__(self, ID, saldo):
         self.__ID = ID # método/atributo privado deve ter dois underlines antes de ser declarado
         self.saldo = saldo
+    
     def deposito(self, valor):
         self.saldo += valor
+    
     def saque(self, valor):
         if self.saldo >= valor:
             self.saldo -= valor
+    
     def imprimeReserva(): # métodos estáticos não possuem o argumento self
         print(Conta.__total * Conta.reserva)
      
